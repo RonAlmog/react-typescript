@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import List from "./components/List";
 
 function App() {
   const [age, setAge] = useState<number>(30);
@@ -13,7 +14,7 @@ function App() {
       note?: string;
     }[];
   }
-  const [people, setPeople] = useState<IState["people"]>();
+  const [people, setPeople] = useState<IState["people"]>([]);
 
   const changeAge = () => {
     setAge(77);
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <h1>People invited to our party</h1>
+      <List people={people} />
     </div>
   );
 }
