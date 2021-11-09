@@ -16,13 +16,7 @@ const List: React.FC<IProps> = ({ people }) => {
       );
     });
   };
-  return (
-    <div>
-      {people.map((p) => {
-        return renderList();
-      })}
-    </div>
-  );
+  return <div>{renderList()}</div>;
 };
 
 export default List;
